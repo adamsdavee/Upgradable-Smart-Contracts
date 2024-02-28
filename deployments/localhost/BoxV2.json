@@ -1,0 +1,115 @@
+{
+  "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "ValueChanged",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "retrieve",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "store",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xea37ecbbba3398d926e7deca45e818c4177c47d01d6ad15379a7d3ce5d5b7ff7",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "transactionIndex": 0,
+    "gasUsed": "191301",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x4aff82a943bfe84e50709e696628f65bc962f381cd1c3284fa6a59bdb1c3a6b2",
+    "transactionHash": "0xea37ecbbba3398d926e7deca45e818c4177c47d01d6ad15379a7d3ce5d5b7ff7",
+    "logs": [],
+    "blockNumber": 4,
+    "cumulativeGasUsed": "191301",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "c5dd8cc9fd7678ff965a8482f654c065",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newValue\",\"type\":\"uint256\"}],\"name\":\"ValueChanged\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"retrieve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newValue\",\"type\":\"uint256\"}],\"name\":\"store\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/BoxV2.sol\":\"BoxV2\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/BoxV2.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\n\\r\\npragma solidity ^0.8.7;\\r\\n\\r\\ncontract BoxV2 {\\r\\n    uint256 internal value;\\r\\n\\r\\n    event ValueChanged(uint256 newValue);\\r\\n\\r\\n    function store(uint256 newValue) public {\\r\\n        value = newValue;\\r\\n        emit ValueChanged(newValue);\\r\\n    }\\r\\n\\r\\n    function retrieve() public view returns (uint256) {\\r\\n        return value;\\r\\n    }\\r\\n\\r\\n    function version() public pure returns (uint256) {\\r\\n        return 2;\\r\\n    }\\r\\n\\r\\n    function increment() public {\\r\\n        value = value + 1;\\r\\n        emit ValueChanged(value);\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0xeab62e49b1385bd89b3ef09bee6dd0acf1341245a8c8a8b7e2f41147ba754571\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610281806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632e64cec11461005157806354fd4d501461006f5780636057361d1461008d578063d09de08a146100a9575b600080fd5b6100596100b3565b604051610066919061016f565b60405180910390f35b6100776100bc565b604051610084919061016f565b60405180910390f35b6100a760048036038101906100a291906101bb565b6100c5565b005b6100b1610106565b005b60008054905090565b60006002905090565b806000819055507f93fe6d397c74fdf1402a8b72e47b68512f0510d7b98a4bc4cbdf6ac7108b3c59816040516100fb919061016f565b60405180910390a150565b60016000546101159190610217565b6000819055507f93fe6d397c74fdf1402a8b72e47b68512f0510d7b98a4bc4cbdf6ac7108b3c5960005460405161014c919061016f565b60405180910390a1565b6000819050919050565b61016981610156565b82525050565b60006020820190506101846000830184610160565b92915050565b600080fd5b61019881610156565b81146101a357600080fd5b50565b6000813590506101b58161018f565b92915050565b6000602082840312156101d1576101d061018a565b5b60006101df848285016101a6565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061022282610156565b915061022d83610156565b9250828201905080821115610245576102446101e8565b5b9291505056fea26469706673582212204349b2cde6e47bff7ba9ba60e021984e4c62f992c7d116db930d024deab0556064736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632e64cec11461005157806354fd4d501461006f5780636057361d1461008d578063d09de08a146100a9575b600080fd5b6100596100b3565b604051610066919061016f565b60405180910390f35b6100776100bc565b604051610084919061016f565b60405180910390f35b6100a760048036038101906100a291906101bb565b6100c5565b005b6100b1610106565b005b60008054905090565b60006002905090565b806000819055507f93fe6d397c74fdf1402a8b72e47b68512f0510d7b98a4bc4cbdf6ac7108b3c59816040516100fb919061016f565b60405180910390a150565b60016000546101159190610217565b6000819055507f93fe6d397c74fdf1402a8b72e47b68512f0510d7b98a4bc4cbdf6ac7108b3c5960005460405161014c919061016f565b60405180910390a1565b6000819050919050565b61016981610156565b82525050565b60006020820190506101846000830184610160565b92915050565b600080fd5b61019881610156565b81146101a357600080fd5b50565b6000813590506101b58161018f565b92915050565b6000602082840312156101d1576101d061018a565b5b60006101df848285016101a6565b91505092915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b600061022282610156565b915061022d83610156565b9250828201905080821115610245576102446101e8565b5b9291505056fea26469706673582212204349b2cde6e47bff7ba9ba60e021984e4c62f992c7d116db930d024deab0556064736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1166,
+        "contract": "contracts/BoxV2.sol:BoxV2",
+        "label": "value",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
